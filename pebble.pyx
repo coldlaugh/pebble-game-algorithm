@@ -248,53 +248,6 @@ class lattice(object):
         }
         return True
 
-    def test(self):
-
-        self.add_bond(1,2)
-        self.add_bond(2,3)
-        self.add_bond(1,3)
-        self.add_bond(1,4)
-        self.add_bond(1,8)
-        self.add_bond(4,8)
-
-
-        print self.digraph  # directed graph of the pebble game
-        # print self.graph    # complete graph, all connections.
-        #
-        # print self.add_bond(1,2) # a redundent bond, return False
-        # print self.add_bond(1,4) # a independent bond, return True
-        #
-        # print self.collect_four_pebble(1,3) # if site 1,3 are relatively rigid, return False, otherwise True.
-        # # print self.collect_four_pebble(2,4) # if site 2,4 are relatively rigid, return False, otherwise True.
-        #
-        #
-        self.decompose_into_cluster()
-        print 'cluster:',self.cluster
-
-        self.decompose_stress()
-        print 'stress:',self.stress
-
-        self.clear()
-
-        print 'another lattice:'
-
-        self.add_bond(1,2)
-        self.add_bond(2,3)
-        self.add_bond(3,4)
-        self.add_bond(4,1)
-        self.add_bond(1,3)
-        self.add_bond(2,4)
-        self.add_bond(4,5)
-        self.add_bond(5,6)
-        self.add_bond(6,7)
-
-
-        self.decompose_into_cluster()
-        print 'cluster:',self.cluster
-
-        self.decompose_stress()
-        print 'stress:',self.stress
-
 
 
 

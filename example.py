@@ -65,7 +65,12 @@ if __name__ == '__main__':
         print 'site 1 and 5 are relatively floppy'
     else:
         print 'site 1 and 5 are relatively rigid'
+    print 'raw graph:'
+    print G.graph
+    print 'raw directed graph with pebble number, format: {site number:[list of connected sites, pebble number]}'
+    print G.digraph
     print '--------------------------------\n\n'
+
 
 
 
